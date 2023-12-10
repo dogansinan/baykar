@@ -14,6 +14,8 @@ Baykar IHA Kiralama Platformu
 <img src="https://raw.githubusercontent.com/dogansinan/baykar/main/screenshots/IhaListesi.png" >
 
 # <b>Bilgi Merkezi /management</b>
+Bu sayfa yetkili kullanıcılar tarafından sistemin ön yüzden takip edilmesini amaçlar. 
+*Datatable Auto Fill from JSON AJAX
 Bu alana sadece super user yetkisi olanlar girebilir. Olmayan kullanıcılar aşağıdaki ekranla karşılaşırlar.
 <img src="https://raw.githubusercontent.com/dogansinan/baykar/main/screenshots/BilgiMerkezi.png" >
 Olanlar ise;
