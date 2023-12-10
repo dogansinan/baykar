@@ -1,0 +1,85 @@
+{% load static %}
+<header id="header" style="margin-top:0px;background-color: black;" class="navbar navbar-expand-lg navbar-end navbar-dark navbar-absolute-top navbar-show-hide fixed-top" data-hs-header-options='{
+  "fixMoment": 0,
+  "fixEffect": "slide"
+}'>
+<div class="container">
+<nav class="js-mega-menu navbar-nav-wrap">
+<!-- Default Logo -->
+<a class="navbar-brand" href="/" aria-label="Unify">
+<img class="navbar-brand" src="https://cdn.baykartech.com/media/images/contents/Baykar-Logo.svg" style="width:130px;"  alt="Image Description">
+</a>
+<!-- End Default Logo -->
+
+<!-- Toggler -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-default">
+  <i class="bi-list"></i>
+</span>
+<span class="navbar-toggler-toggled">
+  <i class="bi-x"></i>
+</span>
+</button>
+<!-- End Toggler -->
+
+<!-- Collapse -->
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+<div class="navbar-absolute-top-scroller">
+  <ul class="navbar-nav nav-pills">
+    <!-- Landings -->
+    <li class="hs-has-mega-menu nav-item" data-hs-mega-menu-item-options='{
+          "desktop": {
+            "maxWidth": "40rem"
+          }
+        }'>
+        {% if user.is_authenticated %}
+      <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link text-light fw-bold" aria-current="page" href="{% url 'rental' %}" role="button" aria-expanded="false">Kiralamalar<span class="badge bg-soft-success text-success fw-bold">{{ ihalar.all.count }}</span></a>
+      {% else %}
+      <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link text-light fw-bold" aria-current="page" href="{% url 'login' %}" role="button" aria-expanded="false">Kiralama</a>
+      {% endif %}
+    </li>
+    <!-- End Landings -->
+    <!-- Pages -->
+    <li class="hs-has-mega-menu nav-item">
+      <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link text-light fw-bold" href="{% url 'iha' %}" role="button" aria-expanded="false">İnsansız Hava Araçları</a>
+    </li>
+    <!-- End Pages -->
+    <!-- Docs -->
+    <li class="hs-has-mega-menu nav-item" data-hs-mega-menu-item-options='{
+          "desktop": {
+            "maxWidth": "20rem"
+          }
+        }'>
+      <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link text-light fw-bold " href="{% url 'management' %}" role="button" aria-expanded="false">Bilgi Merkezi<span style="margin-left: 5px;" class="badge bg-light text-dark fw-bold">Yetkili</span></a>
+      
+    </li>
+    <!-- End Docs -->
+    {% if user.is_authenticated %}
+    <li class="nav-item ms-lg-auto">
+      <a class="btn btn-light fw-bold me-2 me-lg-0" href="{% url 'logout' %}">Çıkış Yap</a>
+    </li>
+    <li class="nav-item d-flex">
+      <img src="{{request.user.profil.profilresim.url}}" class="rounded-5" width="48px">
+      <a class="nav-link text-light fw-bold" href="{% url 'profile' %}">{{user.username}}</a>
+    </li>
+    
+     {% else %}
+     
+    <li class="nav-item ms-lg-auto">
+      <a class="btn btn-soft-light fw-bold d-none d-lg-inline-block" href="{% url 'login' %}">Giriş Yap</a>
+    </li>
+   
+    <li class="nav-item">
+      <a class="btn btn-soft-light fw-bold d-none d-lg-inline-block" href="{% url 'register' %}">Kayıt Ol</a>
+    </li>
+    {% endif %}   
+  
+  </ul>
+</div>
+</div>
+<!-- End Collapse -->
+</nav>
+</div>
+</header>
+
+<!-- ========== END HEADER ========== -->

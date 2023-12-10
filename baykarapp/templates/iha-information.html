@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container text-white text-center mt-5 mb-5">
+    <img src="{{ ihaDetay.resim.url }}" width="100%" alt="">
+    <h2>{{ ihaDetay.isim }}</h2>
+    <p class="fw-bold">{{ ihaDetay.tanitim }}</p>
+    <h5 >{{ ihaDetay.isim }} ağırlığı {{ ihaDetay.agirlik }} kilogramdır.</h5>
+    <h4>İHA'larımızı kiralama durumu saatlik olup {{ ihaDetay.isim }} İHA'ımızı kiralamanın bedeli {{ ihaDetay.fiyat }} $'dır.</h4>
+    <div class="buttonlar d-flex justify-content-evenly mt-5">
+            {% if user.is_authenticated %}
+                <form action="" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="ihaid" value="{{ ihaDetay.id }}">
+                        <button type="submit" name="listele" class="btn btn-secondary detay-button">
+                            {% if request.user in ihaDetay.kiralanacak.all %}
+                            Listemden Çıkart
+                            {% else %}
+                            Listeye Ekle
+                            {% endif %}
+                        </button>             
+                </form>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <a class="fw-bold">Süre(örn:'6' saat)</a>
+                        <input type="number" name="number" class="py-2 form-control d-inline-flex" min="1" max="48" style="width : 70px">
+                        <button type="submit" name="kirala" class="btn btn-secondary detay-button">Kirala</button>                    
+                    </form>   
+        {% else %}
+        {% endif %}                
+    </div>
+</div>
+{% endblock content %}

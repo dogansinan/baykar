@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} FONTAWESOME {% endcomment %}
+    {% comment %} BOOTSRAP {% endcomment %}
+    {% comment %} CSS {% endcomment %}
+     <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="https://htmlstream.com/unify/assets/css/vendor.min.css">
+     <!-- CSS Unify Template -->
+     <link rel="stylesheet" href="https://htmlstream.com/unify/assets/css/theme.min.css?v=1.0">
+     <!-- Favicon -->
+     <link rel="shortcut icon" href="http://127.0.0.1:8000/static/image/logo.png">
+     <!-- Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+     <title>IHA Kiralama Platformu</title>
+</head>
+<body>
+  <!-- Akış Bilgilendirme -->
+    {% if messages %}
+        {% for mesaj in messages %}
+        <div class="alert alert-dismissible alert-soft-dark fade show position-absolute" style="width: 25%;right: 1%;" role="alert">
+          <span class="fw-bold"> {{mesaj}}</span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  
+        {% endfor %}
+    {% else %}
+    <!-- Akış Bilgilendirme Son -->
+    {% endif %}
+    {% include "includes/_navbar.html" %}
+    {% block content %}
+    {% endblock content %}
+    {% include "includes/_footer.html" %}
+</body>
+</html>

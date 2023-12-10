@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:wght@900&family=Poppins:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none ;
+    outline: 0;
+    border: none;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    background-color: #132143;
+}
+
+.img-logo{
+    width: 70px;
+}
+
+.navbar{
+    background-color: white;
+}
+
+.nav-item a {
+    font-size: 20px;
+}
+
+.nav-item:nth-child(2){
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.bg-footer {
+    background-color: #33383c;
+    padding: 50px 0 30px;
+}
+.footer-heading {
+    letter-spacing: 2px;
+}
+
+.footer-link a {
+    color: #acacac;
+    line-height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+.footer-link a:hover {
+    color: #1bbc9b;
+}
+
+.contact-info {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.footer-social-icon {
+    font-size: 15px;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+}
+
+.facebook {
+    background-color: #4e71a8;
+    color: #ffffff;
+}
+
+.twitter {
+    background-color: #55acee;
+    color: #ffffff;
+}
+
+.google {
+    background-color: #d6492f;
+    color: #ffffff;
+}
+
+.apple {
+    background-color: #424041;
+    color: #ffffff;
+}
+
+.footer-alt {
+    color: #acacac;
+}
+
+.footer-heading {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading:after {
+    content: '';    
+    width: 25px;
+    border-bottom: 1px solid #FFF;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-bottom: 1px solid #1bbc9b;
+}
+
+/* CARDS */
+
+.kategori-card{
+    border: none;
+    max-width: 1200px !important;
+    margin: auto;
+    margin-bottom: 45px !important;
+    padding: 50px;
+    background-image: linear-gradient(270deg, #324673 0%, #336ea2 100%);
+    border-radius: 25px;
+    transition: all .3s;
+}
+
+
+.kategori-card:hover{
+    max-width: 1300px !important;
+}
+
+
+.card-body .kategori-isim{
+    font-weight: 700;
+    font-size: 35px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.detay-button{
+    padding: 10px 20px;
+}
+
+/* PROFİL */
+
+.profilpic{
+    margin-top: 25px;
+    border-radius: 100%;
+    width: 65px;
+}

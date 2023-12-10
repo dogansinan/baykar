@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container" style="margin-top:150px;margin-bottom: 100px;">
+    <div class="mx-lg-auto" style="max-width: 25rem;">
+      <div class="position-relative">
+    <div class="container" style="margin-top: 100px;">
+        
+        <form action="" method="POST" class="mb-4">
+            {% csrf_token %}
+            <h5>| Üyelik Oluştur</h5>
+            <br>
+            <input type="text" name="kullanici" required id="" placeholder="Kullanıcı Adı" class="form-control form-control-lg">
+            <br>
+            <input type="email" name="email" required id="" placeholder="E-Posta Adresi" class="form-control form-control-lg">
+            <br>
+            <input type="text" name="isim" required id="" placeholder="İsim" class="form-control form-control-lg">
+            <br>
+            <input type="text" name="soyisim" required id="" placeholder="Soyisim" class="form-control form-control-lg">
+            <br>
+            <input type="password" name="sifre1" required id="" placeholder="Parola" class="form-control form-control-lg">
+            <br>
+            <input type="password" name="sifre2" required id="" placeholder="Parola Onayla" class="form-control form-control-lg">
+            <br>
+            <div class="d-grid gap-4">
+            <input type="submit" value="Kayıt Ol" class="btn btn-soft-dark  btn-lg">
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+
+
+{% endblock content %}

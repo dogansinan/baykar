@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<!-- Card Grid -->
+<div class="container content-space-1" style="margin-top:100px;margin-bottom:100px;min-height: auto;">
+    <!-- Heading -->
+    <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
+      <h2>Neden Baykar?</h2>
+      <span class="fw-bold text-dark-10">1986’dan bu yana Türkiye’nin teknolojik olarak bağımsızlaşması amacıyla yerli ve milli üretimden yana çalışan Baykar, geçtiğimiz 35 yıl içinde Türkiye’de savunma ve havacılık alanında dönüşüm yaratacak bir ivmenin öncüsü haline geldi. Bugün Baykar olarak, otomotiv endüstrisi için adım attığımız mühendislik girişimimizi yeni kuşak mühendislerimizle gökyüzüne taşıyarak dünyanın sayılı insansız hava aracı üreticilerinden biri olmanın gururunu taşıyoruz. Türkiye’nin ilk yerli ve milli İnsansız Hava Araçlarını üretirken en önemli motivasyonumuz her zaman kendi mühendislerimize ve beyin gücümüze güvenmek oldu. </span>
+    </div>
+    <!-- End Heading -->
+  
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        {% for kategori in kategoriler %}
+      <div class="col mb-5 mb-md-0">
+        <!-- Card -->
+        <a class="card card-ghost card-transition-zoom h-100" href="{% url 'iha-information' kategori.slug %}">
+          <div class="card-transition-zoom-item">
+            <img class="card-img" src="{{ kategori.resim.url }}" alt="Image Description" width="300px" height="170px">
+          </div>
+  <center>
+          <div class="card-body">
+            <h5>{{ kategori.isim }}</h5>
+          </div>
+        </center>
+        </a>
+        <!-- End Card -->
+      </div>
+      <!-- End Col -->
+      {% endfor %}
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Card Grid -->
+
+{% endblock content %}

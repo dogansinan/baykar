@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container" style="margin-top:150px;margin-bottom: 100px;">
+    <div class="mx-lg-auto" style="max-width: 25rem;">
+      <div class="position-relative">
+    <div class="container">
+        <form action="" method="POST" class="mb-4">
+            {% csrf_token %}
+            <h5>| Hesabına Giriş Yap</h5>
+            <br>
+            <input type="text" name="kullanici" required id="" class="form-control form-control-lg" placeholder="Kullanıcı Adı">
+            <br>
+            <input type="password" name="sifre" required id="" class="form-control form-control-lg"placeholder="*******">
+            <br>
+            <div class="d-grid gap-4">
+            <input type="submit" value="Giriş Yap" class="btn btn-soft-primary btn-pointer btn-lg">
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock content %}

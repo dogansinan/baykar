@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<div class="overflow-hidden">
+    <div class="container content-space-1">
+<!-- İHA -->
+{% if ihalar.all.count == 0 %}
+<h3 class="text-center fw-bold text-dark" style="margin-top:300px;">Henüz bir IHA kiralamadınız.</h3>
+{% else %}
+{% for iha in ihalar %}
+<div class="card" style="margin-top:100px;">
+    <img class="card-img card-img-top" src="{{ iha.iha.resim.url }}" alt="Card image cap">
+    <div class="card-img-overlay">
+      <h3 class="card-title">{{ iha.iha.isim }}</h3>
+      <p class="card-text">Toplam Ödenen Tutar:{{ toplamFiyat }}</p>
+      <a href="{% url 'deleteIha' iha.id %}">
+        <button class="btn btn-soft-success ">İptal Et</button>
+    </a>
+    </div>
+  </div>
+  {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{% endblock content %}

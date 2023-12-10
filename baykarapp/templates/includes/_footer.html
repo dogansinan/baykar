@@ -1,0 +1,113 @@
+{% load static %}
+<!-- ========== FOOTER ========== -->
+<footer class="bg-black" style="background-color: black;position: relative;width: 100%;bottom: 0px;left: 0px;margin-top: auto;">
+    <div class="container">
+      <div class="row align-items-center pt-8 pb-4">
+        <div class="col-md mb-5 mb-md-0">
+          <h2 class="fw-medium text-white-70 mb-0">Göklerde 600 Bin Saat. <br>Bayraktar <span class="fw-bold text-white">TB2</span></h2>
+        </div>
+        <!-- End Col -->
+  
+        <div class="col-md-auto">
+          <div class="d-grid d-sm-flex gap-3">
+            <a class="btn-pointer btn btn-soft-primary fw-bold" href="https://www.youtube.com/watch?v=roAhONBtVSc" target="_blank">Tanıtımı İzle</a>
+            <a class="btn btn-ghost-light btn-pointer" href="{% url 'register' %}">Kayıt Ol</a>
+          </div>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+  
+      
+  
+      <div class="row align-items-md-center py-6">
+        <div class="col-md mb-3 mb-md-0">
+          <!-- List -->
+          <ul class="list-inline list-px-2 mb-0">
+            <li class="list-inline-item"><a class="link link-light link-light-75" href="#">Gizlilik Politikası</a></li>
+            <li class="list-inline-item"><a class="link link-light link-light-75" href="#">Şartlar ve Kurallar</a></li>
+            <li class="list-inline-item"><a class="link link-light link-light-75" href="#">Durum</a></li>
+            <li class="list-inline-item">
+              <!-- Button Group -->
+              <div class="btn-group">
+                <a class="link link-light link-light-75" href="javascript:;" id="selectLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="d-flex align-items-center">
+                    <img class="avatar avatar-xss avatar-circle me-2" src="https://htmlstream.com/unify/assets/vendor/flag-icon-css/flags/1x1/tr.svg" alt="Image description" width="16"/>
+                    <span>Türkçe</span>
+                  </span>
+                </a>
+  
+                <div class="dropdown-menu">
+                  <a class="dropdown-item d-flex align-items-center active" href="#">
+                    <img class="avatar avatar-xss avatar-circle me-2" src="https://htmlstream.com/unify/assets/vendor/flag-icon-css/flags/1x1/us.svg" alt="Image description" width="16"/>
+                    <span>English</span>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <img class="avatar avatar-xss avatar-circle me-2" src="https://htmlstream.com/unify/assets/vendor/flag-icon-css/flags/1x1/de.svg" alt="Image description" width="16"/>
+                    <span>Deutsch</span>
+                  </a>
+                </div>
+              </div>
+              <!-- End Button Group -->
+            </li>
+          </ul>
+          <!-- End List -->
+        </div>
+        <!-- End Col -->
+  
+        <div class="col-md-auto">
+          <img src="https://cdn.baykartech.com/media/images/contents/Baykar-Logo.svg" style="width:130px;"  alt="Image Description">
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+        <script src="https://htmlstream.com/unify/assets/js/vendor.min.js"></script>
+        <script src=" https://htmlstream.com/unify/assets/js/theme.min.js"></script>     
+        
+        
+        <script>
+            (function() {
+              // INITIALIZATION OF NAVBAR
+              // =======================================================
+              new HSHeader('#header').init()
+        
+        
+              // INITIALIZATION OF MEGA MENU
+              // =======================================================
+              const megaMenu = new HSMegaMenu('.js-mega-menu', {
+                desktop: {
+                  position: 'left'
+                }
+              })
+        
+        
+              // INITIALIZATION OF GO TO
+              // =======================================================
+              new HSGoTo('.js-go-to')
+        
+        
+              // INITIALIZATION OF SWIPER
+              // =======================================================
+              var swiper = new Swiper('.js-swiper-clients',{
+                slidesPerView: 2,
+                breakpoints: {
+                  380: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 15,
+                  },
+                },
+              });
+            })()
+          </script>       
+    </footer>
